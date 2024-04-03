@@ -1,0 +1,6 @@
+FROM python:3.11.8-slim-bookworm
+LABEL maintainer="sinfallas@gmail.com"
+
+WORKDIR /app
+RUN apt update && apt -y install --no-install-recommends --no-install-suggests curl wget nano unzip zip freetds-dev freetds-bin unixodbc-dev tdsodbc && apt clean && rm -rf /var/lib/apt/lists/*
+RUN pip install pyodbc sqlalchemy

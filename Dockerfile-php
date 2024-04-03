@@ -1,0 +1,12 @@
+FROM debian:bookworm
+LABEL maintainer="sinfallas@gmail.com"
+
+WORKDIR /app
+RUN apt update && apt -y install --no-install-recommends --no-install-suggests apt-transport-https lsb-release ca-certificates git curl nginx libnginx-mod-stream wget nano unzip zip freetds-bin freetds-dev && apt clean && rm -rf /var/lib/apt/lists/*
+RUN wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+RUN echo "deb https://packages.sury.org/php/ bookworm main" > /etc/apt/sources.list.d/php.list
+RUN apt update && apt -y install --no-install-recommends --no-install-suggests php8.2-sybase php8.2 php8.2-cli php8.2-fpm php8.2-bz2 php8.2-curl php8.2-mbstring php8.2-intl
+RUN curl --insecure https://getcomposer.org/composer.phar -o /usr/bin/composer
+RUN chmod +x /usr/bin/composer
+RUN composer self-update
+EXPOSE 80
