@@ -2,5 +2,7 @@ FROM python:3.11.8-slim-bookworm
 LABEL maintainer="sinfallas@gmail.com"
 
 WORKDIR /app
-RUN apt update && apt -y install --no-install-recommends --no-install-suggests curl wget nano unzip zip freetds-dev freetds-bin unixodbc-dev tdsodbc && apt clean && rm -rf /var/lib/apt/lists/*
+RUN apt update && apt -y install --no-install-recommends --no-install-suggests nginx libnginx-mod-stream curl wget nano unzip zip freetds-dev freetds-bin unixodbc-dev tdsodbc && rm -rf /var/lib/{apt,dpkg,cache,log} && apt-get clean
 RUN pip install pyodbc sqlalchemy
+EXPOSE 80
+CMD /usr/sbin/nginx -g "daemon off;"
