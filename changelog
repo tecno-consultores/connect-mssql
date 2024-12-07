@@ -1,4 +1,40 @@
-commit 2b7e3bb774f8de04c83b222b6f1757ca656a4efc (HEAD -> main, origin/main, origin/HEAD)
+commit 162c405a5ff3ca01249422f15eeb4191fed0dea2 (HEAD -> main, origin/main, origin/HEAD)
+Author: Jesus Palencia <sinfallas@gmail.com>
+Date:   Sat Dec 7 18:33:09 2024 -0400
+
+    * versiones de python
+
+commit fb9513be290a6acefb93ce73331f159c8a1dd9ba
+Author: Jesús Palencia <sinfallas@yahoo.com>
+Date:   Fri May 17 10:50:33 2024 -0400
+
+    Add files via upload
+
+commit 08280d7aa9736d3f1267e6cf9b5a3ade8e07ee16 (tag: v1.0.0)
+Author: Jesus Palencia <sinfallas@gmail.com>
+Date:   Sun May 5 16:50:10 2024 -0400
+
+    Update README.md
+
+commit f1cce064b198259b815f31c41e9270c451aa7c95
+Author: Jesus Palencia <sinfallas@gmail.com>
+Date:   Sun May 5 14:57:09 2024 -0400
+
+    Update Dockerfile-python
+
+commit 6297309961d29643991c319f3bdaec4858edeeec
+Author: Jesus Palencia <sinfallas@gmail.com>
+Date:   Sun May 5 14:40:28 2024 -0400
+
+    Update Dockerfile-php
+
+commit 6de242f59581a48886ace404fc5e3810431e580b
+Author: Jesus Palencia <sinfallas@gmail.com>
+Date:   Wed Apr 3 19:08:22 2024 -0400
+
+    * changelog
+
+commit 2b7e3bb774f8de04c83b222b6f1757ca656a4efc
 Author: Jesus Palencia <sinfallas@gmail.com>
 Date:   Wed Apr 3 19:08:12 2024 -0400
 
