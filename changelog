@@ -1,4 +1,16 @@
-commit 162c405a5ff3ca01249422f15eeb4191fed0dea2 (HEAD -> main, origin/main, origin/HEAD)
+commit 65630a3c472a065149aacf49b352667706cc1099 (HEAD -> main, origin/main, origin/HEAD)
+Author: Jesus Palencia <sinfallas@gmail.com>
+Date:   Sat Dec 7 20:00:10 2024 -0400
+
+    * versiones php
+
+commit 5a85be6d2243da83c46a9b6bbe8b43e76034944d
+Author: Jesus Palencia <sinfallas@gmail.com>
+Date:   Sat Dec 7 18:33:20 2024 -0400
+
+    * changelog
+
+commit 162c405a5ff3ca01249422f15eeb4191fed0dea2
 Author: Jesus Palencia <sinfallas@gmail.com>
 Date:   Sat Dec 7 18:33:09 2024 -0400
 
