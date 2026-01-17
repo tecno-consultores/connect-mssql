@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# Made by Sinfallas <sinfallas@yahoo.com>
+# Licence: GPL-2
+
+if [[ "$EUID" = "0" ]]; then
+	echo -e "\e[00;31mERROR: NO debe ser root.\e[00m"
+	exit 1
+fi
+
+clear
+docker buildx create --name container-builder --driver docker-container --bootstrap --use
+docker buildx build --platform linux/arm64,linux/amd64 --push -t sinfallas/connect-mssql-php:8.1 --builder=container-builder -f Dockerfile-php-8.1 .
+docker buildx build --platform linux/arm64,linux/amd64 --push -t sinfallas/connect-mssql-php:8.2 --builder=container-builder -f Dockerfile-php-8.2 .
+docker buildx build --platform linux/arm64,linux/amd64 --push -t sinfallas/connect-mssql-php:8.3 --builder=container-builder -f Dockerfile-php-8.3 .
+docker buildx build --platform linux/arm64,linux/amd64 --push -t sinfallas/connect-mssql-php:8.4 --builder=container-builder -f Dockerfile-php-8.4 .
+docker buildx build --platform linux/arm64,linux/amd64 --push -t sinfallas/connect-mssql-php:latest --builder=container-builder -f Dockerfile-php-8.4 .
+docker buildx build --platform linux/arm64,linux/amd64 --push -t sinfallas/connect-mssql-python:3.10 --builder=container-builder -f Dockerfile-python-3.10 .
+docker buildx build --platform linux/arm64,linux/amd64 --push -t sinfallas/connect-mssql-python:3.11 --builder=container-builder -f Dockerfile-python-3.11 .
+docker buildx build --platform linux/arm64,linux/amd64 --push -t sinfallas/connect-mssql-python:3.12 --builder=container-builder -f Dockerfile-python-3.12 .
+docker buildx build --platform linux/arm64,linux/amd64 --push -t sinfallas/connect-mssql-python:latest --builder=container-builder -f Dockerfile-python-3.12 .
+docker buildx rm container-builder
+docker system prune -af
+
+echo "finalizado..."
+exit 0
